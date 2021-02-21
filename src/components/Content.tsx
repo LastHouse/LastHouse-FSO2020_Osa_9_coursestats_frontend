@@ -1,23 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-
-interface courses {
-  name: string;
-  exerciseCount: number;
-}
-
-interface ContentProps {
-  courseParts: courses[];
-}
+import { ContentProps } from '../types';
+import Part from './Part';
 
 const Content: React.FC<ContentProps> = (props) => {
   return (
     <div>
-      {props.courseParts.map((course, i) => (
-        <p key={i}>
-          {course.name} {course.exerciseCount}
-        </p>
-      ))}
+      <Part courseParts={props.courseParts} />
     </div>
   );
 };

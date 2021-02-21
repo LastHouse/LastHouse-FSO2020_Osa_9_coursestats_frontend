@@ -1,13 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-
-interface courses {
-  exerciseCount: number;
-}
-
-interface TotalProps {
-  courseParts: courses[];
-}
+import { TotalProps } from '../types';
 
 const Total: React.FC<TotalProps> = (props) => {
   return (
